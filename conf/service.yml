@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: helloworld-service
+spec:
+  type: NodePort
+  selector:
+    app: helloworld-app
+  ports:
+    - port: 5000

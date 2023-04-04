@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: helloworld-app
+  labels:
+    app: helloworld-app
+spec:
+  containers:
+  - name: helloworld-app
+    image: sgenette/spring-boot-docker:latest
+    imagePullPolicy: Never
+    ports:
+      - containerPort: 8080
+        hostPort: 5000
